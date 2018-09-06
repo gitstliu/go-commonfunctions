@@ -11,7 +11,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/alecthomas/log4go"
+	"github.com/gitstliu/log4go"
 )
 
 type TimeSpan struct {
@@ -26,8 +26,6 @@ type NodeToRecord interface {
 func PanicHandler() {
 	if r := recover(); r != nil {
 		log4go.Error("Run time Error %v", r)
-		//		fmt.Println(r)
-		//		fmt.Printf("%T", r)
 		panic(r)
 	}
 }
